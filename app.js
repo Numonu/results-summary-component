@@ -45,7 +45,7 @@ function getItem(icon , category , score){
             <img src=${icon} alt="brain icon"> ${category}
         </span>
         <span class="stats__value">
-            <span id="reaction">${score}</span>
+            <span>${score}</span>
             <span class="stats__max-value"> / 100</span>
         </span>
     </li>`
