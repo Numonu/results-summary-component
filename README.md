@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- More Solutions URL: [](https://github.com/Numonu)
-- Live Site URL: [](https://numonu.github.io/results-summary-component)
+- More Solutions URL: [Github](https://github.com/Numonu)
+- Live Site URL: [GithubPages](https://numonu.github.io/results-summary-component)
 
 ## My process
 
