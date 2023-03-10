@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+:root{
+
+    /*Neutral*/
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    /*Gradients*/
+
+    --Light-slate-blue : hsl(252, 100%, 67%); /*background*/
+    --Light-royal-blue : hsl(241, 81%, 54%); /*background*/
+
+    --Violet-blue : hsla(256, 72%, 46%, 1); /*circle*/
+    --Persian-blue :  hsla(241, 72%, 46%, 0); /*circle*/
+
+    /* Primary */
+
+    --Light-red : hsl(0, 100%, 67%);
+    --Orangey-yellow : hsl(39, 100%, 56%);
+    --Green-teal : hsl(166, 100%, 37%);
+    --Cobalt-blue : hsl(234, 85%, 45%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+.content{
+    width: 100vw;
+    height: 100vh;
+    /* min-height: 600px; desktop */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.board{
+    /* width: 55%;
+    height: 77% */
+    width: 41.37rem;
+    height: 28.8rem;
+
+    display: flex;
+
+    border-radius: 2rem;
+
+    box-shadow: 10px 10px 40px hsla(252, 100%, 67%, 0.25);
+}
+.results{
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 1rem 0;
+    
+    border-radius: 2.5rem;
+
+    background: linear-gradient(var(--Light-slate-blue) , var(--Light-royal-blue));
+}
+.results__header{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--Light-lavender);
+}
+.results__bubble{
+    width: 55%;
+    aspect-ratio: 1/1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 50%;
+
+    background: linear-gradient(var(--Violet-blue) , var(--Persian-blue));
+}
+.results__you-score{
+    font-size: 4rem;
+    color: var(--White);
+}
+.results__max-score{
+    font-size: 1.1rem;
+    color: var(--Light-lavender);
+}
+.results__status{
+    color: var(--White);
+}
+.results__feedback{
+    max-width: 70%;
+    margin-top: -1rem;
+
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--Light-lavender);
+}
+
+.stats{
+    width: 50%;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.stats__title{
+    text-align: start;
+    font-size: 1.7rem;
+    color: var(--Dark-gray-blue);
+}
+.stats__menu{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+
+    list-style: none;
+}
+.stats__header{
+    font-size: 1.5rem;
+    color: var(--Dark-gray-blue);
+}
+.stats__item{
+    border-radius: .5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    padding: .5rem .5rem;
+}
+.stats__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: .8rem;
+
+    font-size: 1rem;
+}
+
+.stats__value{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--Dark-gray-blue);
+}
+.stats__max-value{
+    color: hsl(241, 43%, 78%);
+}
+
+.stats__action{
+    padding: 1rem 0;
+
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--White);
+
+    border-radius: 2rem;
+    border: none;
+
+    background: linear-gradient(var(--Dark-gray-blue) , var(--Dark-gray-blue));
+
+    cursor: pointer;
+}
+.stats__action:hover{
+    background: linear-gradient(var(--Light-slate-blue) , var(--Light-royal-blue));
+}
+
+
+@media screen  and (min-width : 1500px){
+    html{
+        font-size: 20px;
+    }
+}
+@media screen  and (max-width : 1000px){
+    html{
+        font-size: 14px;
+    }
+    .board{
+        height: 80%;
+        width: 70%;
+
+        flex-direction: column;
+    }
+    .results,
+    .stats{
+        width: 100%;
+        height: 50%;
+    }
+    .results__bubble{
+        width: 40%;
+    }
+}
+@media screen  and (max-width : 824px){
+    html{
+        font-size: 13px;
+    }
+    .board{
+        height: 90%;
+        width: 70%;
+    }
+}
+@media screen  and (max-width : 624px){
+    .board{
+        height: 90%;
+        width: 80%;
+    }
+}
+@media screen  and (max-width : 500px){
+    .board{
+        height: 100%;
+        width: 100%;
+    }
+    .board,
+    .results{
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+    .board{
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+@media screen  and (max-width : 360px){
+    html{
+        font-size: 11px;
+    }
+}
